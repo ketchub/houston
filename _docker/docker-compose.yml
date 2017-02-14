@@ -69,7 +69,7 @@ services:
   rdb:
     image: jlhawn/rethinkdb:2.3.5
     volumes:
-      - ./.jlhawndata/rdb:/var/data
+      - ./.rethink-data/rdb:/var/data
     networks:
       apinet:
       dbnet:
