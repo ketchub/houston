@@ -1,3 +1,12 @@
 [submodule "webui"]
 	path = webui
 	url = git@github.com:ketchub/webui.git
+[submodule "api"]
+	path = api
+	url = git@github.com:ketchub/api.git
+[submodule "jobqueue"]
+	path = jobqueue
+	url = git@github.com:ketchub/jobqueue.git
+[submodule "infrastructure"]
+	path = infrastructure
+	url = git@github.com:ketchub/infrastructure.git
