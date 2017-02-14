@@ -1,0 +1,10 @@
+FROM mhart/alpine-node:6.7.0
+
+# For using PM2 as the process manager
+RUN apk add --no-cache \
+  make \
+  python \
+  g++
+
+# Set the working directory
+WORKDIR /app
