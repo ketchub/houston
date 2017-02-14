@@ -5,6 +5,8 @@ export NODE_ENV = development
 
 SHELL = /bin/bash
 
+# include ./api/Makefile
+
 .PHONY: start
 start: api-setup webui-setup jobqueue-setup
 	@docker-compose -f _docker/docker-compose.yml up -d
