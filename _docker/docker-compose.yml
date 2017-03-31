@@ -38,6 +38,9 @@ services:
       dockerfile: _docker/Dockerfile.api
     volumes:
       - ./../api:/app
+    ports:
+      # For attaching debugger: local dev only
+      - "5858:5858"
     networks:
       - apinet
     command: "./node_modules/.bin/pm2-docker /app/pm2process.yml"

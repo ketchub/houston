@@ -15,8 +15,10 @@ WORKDIR /app
 # In production, we do want to add all files and bundle err'thang
 # ADD . .
 
-# Expose the port 3000
+# Expose the port 3000 express port (@todo: configurable?)
 EXPOSE 3000
+# Expose the NodeJS debug port
+EXPOSE 5858
 
 # Allow the entry point to be customized for dev...
 # ENTRYPOINT ["npm"]
