@@ -66,6 +66,15 @@ api-ssh: export SERVICE_NAME = api
 api-ssh:
 	@make compose-exec
 
+# Start only the api container and its dependencies
+# Note: we actually start the api PROXY container, because it declares
+# the api as a dependency
+.PHONY: start-api
+start-api: api-setup
+	@docker-compose -f _docker/docker-compose.yml up -d api_proxy
+	@docker-compose -f _docker/docker-compose.yml logs -f; true && \
+	make stop
+
 ################################################################################
 # JobQueue
 ################################################################################
