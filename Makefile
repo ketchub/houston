@@ -133,6 +133,15 @@ webui-ssh: export SERVICE_NAME = webui
 webui-ssh:
 	@make compose-exec
 
+# Start only the api container and its dependencies
+# Note: we actually start the api PROXY container, because it declares
+# the api as a dependency
+.PHONY: start-webui
+start-webui: webui-setup
+	@docker-compose -f _docker/docker-compose.yml up -d webui
+	@docker-compose -f _docker/docker-compose.yml logs -f; true && \
+	make stop
+
 ################################################################################
 # Helpers
 ################################################################################

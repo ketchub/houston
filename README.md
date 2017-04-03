@@ -23,3 +23,4 @@ To access the web UI via https (using a self-signed cert), ensure you have an en
 
 Misc. *todos*:
 - Ensure NTP on all system services
+- Local installation of eslint from package root vs requiring global installation right now?
